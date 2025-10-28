@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import org.hibernate.usertype.UserType;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
