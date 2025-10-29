@@ -2,9 +2,7 @@ package domain.transaction;
 
 import domain.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.*;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -14,7 +12,8 @@ import java.time.LocalTime;
 @Entity(name = "transactions")
 @Table(name = "transactions")
 @Getter
-@Service
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 
