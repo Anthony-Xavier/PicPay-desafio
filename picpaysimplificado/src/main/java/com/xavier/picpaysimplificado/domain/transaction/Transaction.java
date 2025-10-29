@@ -1,13 +1,11 @@
-package domain.transaction;
+package com.xavier.picpaysimplificado.domain.transaction;
 
-import domain.user.User;
+import com.xavier.picpaysimplificado.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity(name = "transactions")
 @Table(name = "transactions")

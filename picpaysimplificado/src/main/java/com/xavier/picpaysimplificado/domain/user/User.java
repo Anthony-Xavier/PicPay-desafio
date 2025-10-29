@@ -1,10 +1,8 @@
-package domain.user;
+package com.xavier.picpaysimplificado.domain.user;
 
+import com.xavier.picpaysimplificado.dto.UserDto;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -15,6 +13,7 @@ import java.math.BigDecimal;
 @Service
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 
 public class User {
@@ -23,7 +22,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String fistName;
+    private String firstName;
 
     private String lastName;
 
@@ -39,4 +38,16 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private UserType userType;
+
+    public User(UserDto data){
+        this.firstName = data.firstName();
+        this.lastName = data.lastName();
+        this.document = data.document();
+        this.email = data.email();
+        this.balance = data.balance();
+        this.password = data.password();
+        this.userType = data.userType();
+    }
+
+
 }

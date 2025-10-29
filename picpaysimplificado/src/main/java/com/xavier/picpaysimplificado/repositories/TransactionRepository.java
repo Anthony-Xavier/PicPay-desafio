@@ -1,6 +1,6 @@
-package repositories;
+package com.xavier.picpaysimplificado.repositories;
 
-import domain.transaction.Transaction;
+import com.xavier.picpaysimplificado.domain.transaction.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
